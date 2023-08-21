@@ -9,6 +9,7 @@ const cors = require('cors')
 const getNewArrivalsProducts = require('./get-new-arrivals')
 const getOnSaleProducts = require('./get-onsale')
 const getProductsByCategories = require('./get-product-by-categories')
+const getProductDetail = require('./get-product-detail')
 // const csrf = require('csurf')
 
 // const { credentials } = require('./config')
@@ -87,9 +88,16 @@ app.get('/onsale', async (req, res) => {
 
 })
 
-app.get('/productbycategory', async (req, res) => {
-  const category = req.query.category
+app.get('/productbycategory/:category', async (req, res) => {
+  const category = req.params.category
   const data = await getProductsByCategories(category)
+  return res.send({data})
+
+})
+
+app.get('/productdetail/:id', async (req, res) => {
+  const id = req.params.id
+  const data = await getProductDetail(id)
   return res.send({data})
 
 })

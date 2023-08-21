@@ -26,9 +26,7 @@ const defaultGetProductsByCategoriesBody = {
   },
 };
 
-async function getProductsByCategories({
-category,
-}) {
+async function getProductsByCategories(category) {
   try {
     const limit = 20;
     const offset = 0;
