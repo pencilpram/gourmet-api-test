@@ -51,7 +51,7 @@ async function getProductDetail(id) {
     };
 
     // Find product detail from product id
-    const productDetailResponse = await fetch(`${process.env.ODOO_RPC_URL}`, {
+    const productDetailResponse = await fetch(`https://1004gourmet-staging-9109678.dev.odoo.com/jsonrpc`, {
       method: "POST",
       body: JSON.stringify(body),
       headers: {
@@ -93,7 +93,7 @@ async function getProductDetail(id) {
       id: 35,
     };
 
-    const productImageResponse = await fetch(`${process.env.ODOO_RPC_URL}`, {
+    const productImageResponse = await fetch(`https://1004gourmet-staging-9109678.dev.odoo.com/jsonrpc`, {
       method: "POST",
       body: JSON.stringify(productImageBody),
       headers: {
@@ -127,7 +127,7 @@ async function getProductDetail(id) {
       id: 35,
     };
 
-    const categoriesResponse = await fetch(`${process.env.ODOO_RPC_URL}`, {
+    const categoriesResponse = await fetch(`https://1004gourmet-staging-9109678.dev.odoo.com/jsonrpc`, {
       method: "POST",
       body: JSON.stringify(categoriesBody),
       headers: {
@@ -161,7 +161,7 @@ async function getProductDetail(id) {
     };
 
     const alternativeProductResponse = await fetch(
-      `${process.env.ODOO_RPC_URL}`,
+      `https://1004gourmet-staging-9109678.dev.odoo.com/jsonrpc`,
       {
         method: "POST",
         body: JSON.stringify(alternativeProductBody),
